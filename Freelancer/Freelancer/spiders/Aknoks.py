@@ -32,7 +32,7 @@ class AknoksSpider(scrapy.Spider):
 
     def start_requests(self):
  
-        next_page = f"https://www.freelancer.com/jobs/{str(self.page)}"
+        first_request = f"https://www.freelancer.com/jobs/{str(self.page)}"
         yield scrapy.Request(next_page, headers=self.headers, callback=self.parse)
 
         
